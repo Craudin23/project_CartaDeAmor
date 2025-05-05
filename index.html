@@ -15,6 +15,11 @@
         width: 100%;
         height: 100%;
         overflow: hidden; /* Remove barras de rolagem */
+        background-color: #db6eb5;
+        background-size: cover;
+        background:linear-gradient(135deg, #f8bbd0, #f48fb1, #f06292);
+        background-position: center;
+        width: 100vw;
     }
     
     .playwrite-ro- {
@@ -22,30 +27,33 @@
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
+        
     }
     
     div {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         height: 100vh;
-        background-image: url(/bac_um.avif);
-        background-size: cover;
-        background-position: center;
-        width: 100vw;
+       
     }
     
     img {
         border-radius: 30px;
         border: 3px solid #E0FFFF;
         max-width: 90%; /* Ajusta a largura da imagem para telas menores */
-        height: auto;
+        height: auto; 
+        
     }
-    
+    #imagens {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Permite que as imagens se movam para a próxima linha em telas menores */
+        gap: 10px; /* Espaçamento entre as imagens */
+    }
     p, h1 {
         color: #E0FFFF;
         text-align: center; /* Centraliza o texto */
@@ -70,6 +78,9 @@
         img {
             max-width: 80%; /* Reduz ainda mais a largura da imagem */
         }
+        html, body {
+            overflow: auto; /* Permite rolagem em telas menores */
+        }
     }
     
     /* Estilos para telas muito pequenas (ex.: celulares antigos) */
@@ -85,6 +96,10 @@
         img {
             max-width: 70%; /* Ajusta a largura da imagem */
         }
+        html, body {
+            overflow: auto; /* Permite rolagem em telas menores */
+        }
+
     }
     
     /* Estilos para telas maiores (ex.: desktops grandes) */
@@ -105,7 +120,12 @@
 <body>
     <div class="playwrite-ro-">
         <h1>Para o Amor Da Minha Vida Joice Ketele</h1>
-        <img src="amor.jpg" alt="" width="380" height="420">
+        <div id="imagens">
+            <img src="amor.jpg" alt="" width="380" height="420">
+            <img src="amor.jpg" alt="" width="380" height="420">
+            <img src="amor.jpg" alt="" width="380" height="420">
+        </div>
+        
         <p>Feliz 1 mês de namoro, meu amor! Que venham muitos outros meses e anos juntos. Te amo muito!</p>
         <p>Você é a razão do meu sorriso e a luz dos meus dias. Estou tão feliz por ter você ao meu lado.</p>
         <p>Espero que este cartão traga um sorriso ao seu rosto, assim como você traz alegria à minha vida.</p>
